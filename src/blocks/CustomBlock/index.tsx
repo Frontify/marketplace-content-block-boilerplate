@@ -7,7 +7,7 @@ export const CustomBlock: React.FC = (): ReactElement => {
 
     return (
         <div>
-            <span style={someStyle}>Some custom image component and again</span>
+            <span style={someStyle}>Some custom block</span>
         </div>
     );
 };

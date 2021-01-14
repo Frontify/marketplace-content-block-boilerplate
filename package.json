@@ -2,6 +2,13 @@
   "name": "frontify-block-boilerplate",
   "version": "1.0.0",
   "main": "index.tsx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontify/frontify-block-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/frontify/frontify-block-boilerplate/issues"
+  },
   "scripts": {
     "start:watch": "frontify-block-cli serve"
   },
@@ -9,7 +16,6 @@
     "react": "^17.0.1"
   },
   "devDependencies": {
-    "@types/react": "^17.0.0",
-    "@frontify/block-cli": "^1.0.0"
+    "@types/react": "^17.0.0"
   }
 }
