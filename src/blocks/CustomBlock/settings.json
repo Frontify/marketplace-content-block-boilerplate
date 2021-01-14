@@ -1,0 +1,3 @@
+[
+    { "id": "custom-input", "label": "My Custom Input", "type":"text", "placeholder": "Example value", "value": "Custom Input Value" }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "frontify-block-boilerplate",
+  "version": "1.0.0",
+  "main": "index.tsx",
+  "scripts": {
+    "start:watch": "frontify-block-cli serve"
+  },
+  "dependencies": {
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@frontify/block-cli": "^1.0.0"
+  }
+}
