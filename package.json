@@ -1,7 +1,7 @@
 {
   "name": "custom_block",
   "version": "1.0.0",
-  "main": "index.tsx",
+  "main": "./src/index.tsx",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frontify/frontify-block-boilerplate.git"
@@ -10,6 +10,7 @@
     "url": "https://github.com/frontify/frontify-block-boilerplate/issues"
   },
   "scripts": {
+    "deploy": "frontify-block-cli deploy",
     "start:watch": "frontify-block-cli serve"
   },
   "dependencies": {
