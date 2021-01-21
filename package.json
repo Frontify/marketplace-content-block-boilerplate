@@ -14,6 +14,7 @@
     "start:watch": "frontify-block-cli serve"
   },
   "dependencies": {
+    "frontify-block-cli": "github:Frontify/frontify-block-cli",
     "react": "^17.0.1"
   },
   "devDependencies": {
