@@ -1,25 +1,25 @@
 {
-  "name": "custom_block",
-  "version": "1.0.0",
-  "main": "./src/index.tsx",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/frontify/frontify-block-boilerplate.git"
-  },
-  "bugs": {
-    "url": "https://github.com/frontify/frontify-block-boilerplate/issues"
-  },
-  "scripts": {
-    "deploy": "frontify-block-cli deploy",
-    "start:watch": "frontify-block-cli serve"
-  },
-  "dependencies": {
-    "frontify-block-cli": "github:Frontify/frontify-block-cli",
-    "react": "^17.0.1"
-  },
-  "devDependencies": {
-    "@frontify/eslint-config-react": "^0.4.3",
-    "@types/react": "^17.0.2",
-    "prettier": "^2.2.1"
-  }
+    "name": "custom_block",
+    "version": "1.0.0",
+    "main": "./src/index.tsx",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/frontify/frontify-block-boilerplate.git"
+    },
+    "bugs": {
+        "url": "https://github.com/frontify/frontify-block-boilerplate/issues"
+    },
+    "scripts": {
+        "deploy": "frontify-cli block deploy",
+        "start:watch": "frontify-cli block serve"
+    },
+    "dependencies": {
+        "frontify-cli": "github:Frontify/frontify-cli",
+        "react": "^17.0.1"
+    },
+    "devDependencies": {
+        "@frontify/eslint-config-react": "^0.4.3",
+        "@types/react": "^17.0.2",
+        "prettier": "^2.2.1"
+    }
 }
