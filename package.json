@@ -1,25 +1,20 @@
 {
-    "name": "custom_block",
-    "version": "1.0.0",
-    "main": "./src/index.tsx",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/frontify/frontify-block-boilerplate.git"
-    },
-    "bugs": {
-        "url": "https://github.com/frontify/frontify-block-boilerplate/issues"
-    },
-    "scripts": {
-        "deploy": "frontify-cli block deploy",
-        "start:watch": "frontify-cli block serve"
-    },
-    "dependencies": {
-        "frontify-cli": "github:Frontify/frontify-cli",
-        "react": "^17.0.1"
-    },
-    "devDependencies": {
-        "@frontify/eslint-config-react": "^0.4.3",
-        "@types/react": "^17.0.2",
-        "prettier": "^2.2.1"
-    }
+  "name": "boilerplate-marketplace-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve:block": "frontify-cli block serve"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@frontify/eslint-config-react": "^0.7.0",
+    "@frontify/frontify-cli": "github:Frontify/frontify-cli",
+    "@types/react": "^17.0.14",
+    "eslint": "^7.30.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  }
 }
