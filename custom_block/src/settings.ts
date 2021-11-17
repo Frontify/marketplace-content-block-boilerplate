@@ -1,20 +1,23 @@
-import { DropdownSize } from '@frontify/arcade';
+import { IconEnum } from '@frontify/arcade';
+import { ApiSettings } from '@frontify/guideline-blocks-settings';
 
-export default {
+const settings: ApiSettings = {
     main: [
         {
             id: 'main-dropdown',
             type: 'dropdown',
             defaultValue: 'custom_block',
-            size: 'large',
+            size: 'Large',
             disabled: true,
             choices: [
                 {
                     value: 'custom_block',
-                    icon: 'snippet',
+                    icon: IconEnum.Snippet,
                     label: 'Custom Block',
                 },
             ],
         },
     ],
 };
+
+export default settings;
