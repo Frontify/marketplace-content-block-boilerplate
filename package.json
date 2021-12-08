@@ -16,7 +16,7 @@
     "@frontify/eslint-config-react": "^0.11.0",
     "@frontify/frontify-cli": "2.3.1",
     "@frontify/guideline-blocks-settings": "^0.0.1-alpha.0",
-    "@types/react": "17.0.35",
+    "@types/react": "17.0.37",
     "autoprefixer": "^10.4.0",
     "eslint": "^7.32.0",
     "npm-run-all": "^4.1.5",
