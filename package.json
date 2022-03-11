@@ -8,7 +8,7 @@
     "serve:block": "frontify-cli block serve"
   },
   "dependencies": {
-    "@frontify/app-bridge": "2.12.0-beta.1",
+    "@frontify/app-bridge": "2.12.0-beta.2",
     "@frontify/arcade": "^2.3.0",
     "react": "^17.0.2"
   },
