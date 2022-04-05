@@ -1,28 +1,25 @@
 {
-  "name": "boilerplate-marketplace-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "serve": "run-p serve:*",
-    "serve:block": "frontify-cli block serve"
-  },
-  "dependencies": {
-    "@frontify/app-bridge": "2.12.0-beta.2",
-    "@frontify/arcade": "^5.0.0",
-    "react": "^17.0.2"
-  },
-  "devDependencies": {
-    "@frontify/eslint-config-react": "0.15.2",
-    "@frontify/frontify-cli": "3.0.1",
-    "@frontify/guideline-blocks-settings": "0.7.1",
-    "@types/react": "17.0.40",
-    "autoprefixer": "10.4.4",
-    "eslint": "8.11.0",
-    "npm-run-all": "4.1.5",
-    "postcss": "8.4.12",
-    "postcss-modules": "4.3.1",
-    "prettier": "2.6.0",
-    "typescript": "4.6.2"
-  }
+    "name": "marketplace-content-block-boilerplate",
+    "version": "1.0.0",
+    "main": "src/index.ts",
+    "scripts": {
+        "serve": "frontify-cli block serve"
+    },
+    "dependencies": {
+        "@frontify/app-bridge": "2.12.0",
+        "@frontify/arcade": "^6.1.3",
+        "react": "^17.0.2"
+    },
+    "devDependencies": {
+        "@frontify/eslint-config-react": "0.15.2",
+        "@frontify/frontify-cli": "3.0.3",
+        "@frontify/guideline-blocks-settings": "0.8.1",
+        "@types/react": "17.0.43",
+        "autoprefixer": "10.4.4",
+        "eslint": "8.12.0",
+        "postcss": "8.4.12",
+        "postcss-modules": "4.3.1",
+        "prettier": "2.6.2",
+        "typescript": "4.6.3"
+    }
 }

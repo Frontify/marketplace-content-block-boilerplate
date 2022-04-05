@@ -7,13 +7,12 @@
         "noImplicitAny": true,
         "noImplicitReturns": true,
         "noImplicitThis": true,
-        "outDir": "./dist/server",
         "sourceMap": true,
         "strict": true,
-        "target": "ES2020",
+        "target": "es6",
         "jsx": "react-jsx",
-        "resolveJsonModule": true,
-        "rootDir": "src"
+        "lib": ["ES2021", "DOM"],
+        "resolveJsonModule": true
     },
     "exclude": ["dist", "node_modules"]
 }
