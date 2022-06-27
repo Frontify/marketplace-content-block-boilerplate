@@ -1,3 +1,4 @@
+import { DropdownSize, IconEnum } from '@frontify/fondue';
 import { BlockSettings } from '@frontify/guideline-blocks-settings';
 
 const settings: BlockSettings = {
@@ -6,12 +7,12 @@ const settings: BlockSettings = {
             id: 'main-dropdown',
             type: 'dropdown',
             defaultValue: 'custom_block',
-            size: 'Large',
+            size: DropdownSize.Large,
             disabled: true,
             choices: [
                 {
                     value: 'custom_block',
-                    icon: 'Snippet',
+                    icon: IconEnum.Snippet,
                     label: 'Custom Block',
                 },
             ],
