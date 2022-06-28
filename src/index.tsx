@@ -1,16 +1,40 @@
-import { CSSProperties, ReactElement } from 'react';
+import { AppBridgeNative, useBlockSettings } from '@frontify/app-bridge';
+import { Color } from '@frontify/fondue';
+import { FC } from 'react';
+import { DEFAULT_BACKGROUND_COLOR } from './settings';
 import style from './style.module.css';
 
-export default function AnExampleBlock(): ReactElement {
-    const customStyle: CSSProperties = {
-        color: 'rgb(130, 95, 255)',
+type Settings = {
+    width: string;
+    backgroundColor: Color;
+};
+
+type Props = {
+    appBridge: AppBridgeNative;
+};
+
+const toRgbaString = (color: Color): string => {
+    return `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
+};
+
+const AnExampleBlock: FC<Props> = ({ appBridge }) => {
+    const [blockSettings] = useBlockSettings<Settings>(appBridge);
+    const { width = '100%', backgroundColor = DEFAULT_BACKGROUND_COLOR } = blockSettings;
+
+    const customStyles = {
+        width,
+        color: 'black',
+        height: '100px',
+        border: '2px solid',
+        borderColor: 'rgb(200, 109, 4)',
+        backgroundColor: toRgbaString(backgroundColor),
     };
 
     return (
-        <div>
-            <span className={style.underline} style={customStyle}>
-                A custom block in violet and underlined
-            </span>
+        <div className={style.container} style={customStyles}>
+            A custom block with background color: {backgroundColor.name || backgroundColor}
         </div>
     );
-}
+};
+
+export default AnExampleBlock;
