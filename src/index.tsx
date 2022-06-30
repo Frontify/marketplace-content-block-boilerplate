@@ -25,9 +25,15 @@ const AnExampleBlock: FC<Props> = ({ appBridge }) => {
         width = FULL_WIDTH,
         showRichTextEditor = true,
         backgroundColor = DEFAULT_BACKGROUND_COLOR,
-        textValue = `[{"type":"p","children":[{"text":"A custom block with background color: ${
-            backgroundColor.name || backgroundColor
-        }"}]}]`,
+        // plate (rich text editor plugin) element structure
+        textValue = JSON.stringify([
+            {
+                type: 'p',
+                children: [
+                    { text: `A custom block with background color: ${backgroundColor.name || backgroundColor}` },
+                ],
+            },
+        ]),
     } = blockSettings;
     const isEditing = useEditorState(appBridge);
 
