@@ -1,5 +1,5 @@
-import { AppBridgeNative, useBlockSettings } from '@frontify/app-bridge';
-import { Color } from '@frontify/fondue';
+import { AppBridgeNative, useBlockSettings, useEditorState } from '@frontify/app-bridge';
+import { Color, RichTextEditor } from '@frontify/fondue';
 import { FC } from 'react';
 import { DEFAULT_BACKGROUND_COLOR, FULL_WIDTH } from './settings';
 import style from './style.module.css';
@@ -7,6 +7,8 @@ import style from './style.module.css';
 type Settings = {
     width: string;
     backgroundColor: Color;
+    textValue: string;
+    showRichTextEditor: boolean;
 };
 
 type Props = {
@@ -18,21 +20,32 @@ const toRgbaString = (color: Color): string => {
 };
 
 const AnExampleBlock: FC<Props> = ({ appBridge }) => {
-    const [blockSettings] = useBlockSettings<Settings>(appBridge);
-    const { width = FULL_WIDTH, backgroundColor = DEFAULT_BACKGROUND_COLOR } = blockSettings;
+    const [blockSettings, setBlockSettings] = useBlockSettings<Settings>(appBridge);
+    const {
+        width = FULL_WIDTH,
+        showRichTextEditor = true,
+        backgroundColor = DEFAULT_BACKGROUND_COLOR,
+        textValue = `[{"type":"p","children":[{"text":"A custom block with background color: ${
+            backgroundColor.name || backgroundColor
+        }"}]}]`,
+    } = blockSettings;
+    const isEditing = useEditorState(appBridge);
+
+    const onTextChange = (value: string): Promise<void> => setBlockSettings({ ...blockSettings, textValue: value });
 
     const customStyles = {
         width,
-        color: 'black',
-        height: '100px',
-        border: '2px solid',
-        borderColor: 'rgb(200, 109, 4)',
         backgroundColor: toRgbaString(backgroundColor),
     };
 
     return (
         <div className={style.container} style={customStyles}>
-            A custom block with background color: {backgroundColor.name || backgroundColor}
+            <RichTextEditor
+                onTextChange={onTextChange}
+                readonly={!isEditing || !showRichTextEditor}
+                value={textValue}
+                placeholder="Type your text here"
+            />
         </div>
     );
 };

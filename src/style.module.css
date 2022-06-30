@@ -1,6 +1,8 @@
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: underline;
+    color: black;
+    min-height: 100px;
+    padding: 16px;
+    border: 2px solid;
+    border-color: black;
 }

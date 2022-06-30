@@ -21,6 +21,14 @@ const settings: BlockSettings = {
             ],
         },
     ],
+    content: [
+        {
+            id: 'showRichTextEditor',
+            type: 'switch',
+            defaultValue: true,
+            label: 'With Rich Text Editor',
+        },
+    ],
     layout: [
         {
             id: 'width',
