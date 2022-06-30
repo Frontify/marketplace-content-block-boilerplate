@@ -2,6 +2,7 @@ import { DropdownSize, IconEnum } from '@frontify/fondue';
 import { BlockSettings } from '@frontify/guideline-blocks-settings';
 
 export const DEFAULT_BACKGROUND_COLOR = { r: 250, g: 191, b: 89, a: 1, name: 'Saffron Mango' };
+export const FULL_WIDTH = '100%';
 
 const settings: BlockSettings = {
     main: [
@@ -24,7 +25,7 @@ const settings: BlockSettings = {
         {
             id: 'width',
             type: 'input',
-            defaultValue: '100%',
+            defaultValue: FULL_WIDTH,
             placeholder: '75%',
             label: 'Width',
             rules: [

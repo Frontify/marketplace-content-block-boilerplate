@@ -1,7 +1,7 @@
 import { AppBridgeNative, useBlockSettings } from '@frontify/app-bridge';
 import { Color } from '@frontify/fondue';
 import { FC } from 'react';
-import { DEFAULT_BACKGROUND_COLOR } from './settings';
+import { DEFAULT_BACKGROUND_COLOR, FULL_WIDTH } from './settings';
 import style from './style.module.css';
 
 type Settings = {
@@ -19,7 +19,7 @@ const toRgbaString = (color: Color): string => {
 
 const AnExampleBlock: FC<Props> = ({ appBridge }) => {
     const [blockSettings] = useBlockSettings<Settings>(appBridge);
-    const { width = '100%', backgroundColor = DEFAULT_BACKGROUND_COLOR } = blockSettings;
+    const { width = FULL_WIDTH, backgroundColor = DEFAULT_BACKGROUND_COLOR } = blockSettings;
 
     const customStyles = {
         width,
