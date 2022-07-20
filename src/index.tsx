@@ -1,7 +1,7 @@
 import { AppBridgeNative, useBlockSettings, useEditorState } from '@frontify/app-bridge';
 import { Color, RichTextEditor } from '@frontify/fondue';
 import { FC } from 'react';
-import settings, { DEFAULT_BACKGROUND_COLOR, FULL_WIDTH } from './settings';
+import { DEFAULT_BACKGROUND_COLOR, FULL_WIDTH, settings } from './settings';
 import style from './style.module.css';
 
 type Settings = {
