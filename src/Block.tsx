@@ -1,7 +1,9 @@
-import { AppBridgeNative, useBlockSettings, useEditorState } from '@frontify/app-bridge';
+/* (c) Copyright Frontify Ltd., all rights reserved. */
+
+import { AppBridgeBlock, useBlockSettings, useEditorState } from '@frontify/app-bridge';
 import { Color, RichTextEditor } from '@frontify/fondue';
 import { FC } from 'react';
-import { DEFAULT_BACKGROUND_COLOR, FULL_WIDTH, settings } from './settings';
+import { DEFAULT_BACKGROUND_COLOR, FULL_WIDTH } from './settings';
 import style from './style.module.css';
 
 type Settings = {
@@ -12,14 +14,14 @@ type Settings = {
 };
 
 type Props = {
-    appBridge: AppBridgeNative;
+    appBridge: AppBridgeBlock;
 };
 
 const toRgbaString = (color: Color): string => {
     return `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
 };
 
-const AnExampleBlock: FC<Props> = ({ appBridge }) => {
+export const AnExampleBlock: FC<Props> = ({ appBridge }) => {
     const [blockSettings, setBlockSettings] = useBlockSettings<Settings>(appBridge);
     const {
         width = FULL_WIDTH,
@@ -54,9 +56,4 @@ const AnExampleBlock: FC<Props> = ({ appBridge }) => {
             />
         </div>
     );
-};
-
-export default {
-    block: AnExampleBlock,
-    settings,
 };
