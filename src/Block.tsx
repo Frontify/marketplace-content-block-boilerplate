@@ -22,22 +22,15 @@ const toRgbaString = (color: Color): string => {
 };
 
 export const AnExampleBlock: FC<Props> = ({ appBridge }) => {
+    const isEditing = useEditorState(appBridge);
     const [blockSettings, setBlockSettings] = useBlockSettings<Settings>(appBridge);
+
     const {
         width = FULL_WIDTH,
         showRichTextEditor = true,
         backgroundColor = DEFAULT_BACKGROUND_COLOR,
-        // plate (rich text editor plugin) element structure
-        textValue = JSON.stringify([
-            {
-                type: 'p',
-                children: [
-                    { text: `A custom block with background color: ${backgroundColor.name || backgroundColor}` },
-                ],
-            },
-        ]),
+        textValue,
     } = blockSettings;
-    const isEditing = useEditorState(appBridge);
 
     const onTextChange = (value: string): Promise<void> => setBlockSettings({ ...blockSettings, textValue: value });
 
@@ -52,7 +45,7 @@ export const AnExampleBlock: FC<Props> = ({ appBridge }) => {
                 onTextChange={onTextChange}
                 readonly={!isEditing || !showRichTextEditor}
                 value={textValue}
-                placeholder="Type your text here"
+                placeholder={`A custom block with background color: ${backgroundColor.name || backgroundColor}`}
             />
         </div>
     );

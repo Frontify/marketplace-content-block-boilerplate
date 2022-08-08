@@ -1,3 +1,5 @@
+/* (c) Copyright Frontify Ltd., all rights reserved. */
+
 import { DropdownSize, IconEnum } from '@frontify/fondue';
 import { BlockSettings } from '@frontify/guideline-blocks-settings';
 
@@ -26,7 +28,7 @@ export const settings: BlockSettings = {
             id: 'showRichTextEditor',
             type: 'switch',
             defaultValue: true,
-            label: 'With Rich Text Editor',
+            label: 'Enable Rich Text Editor',
         },
     ],
     layout: [
