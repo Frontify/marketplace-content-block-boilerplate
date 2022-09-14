@@ -16,7 +16,7 @@
         "@frontify/frontify-cli": "5.1.1",
         "@frontify/guideline-blocks-settings": "0.18.0",
         "@types/react": "17.0.48",
-        "autoprefixer": "10.4.8",
+        "autoprefixer": "10.4.11",
         "eslint": "8.23.0",
         "postcss": "8.4.16",
         "postcss-modules": "5.0.0",
