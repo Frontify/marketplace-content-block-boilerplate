@@ -6,7 +6,7 @@
         "serve": "frontify-cli block serve --entryPath src/index.ts"
     },
     "dependencies": {
-        "@frontify/app-bridge": "3.0.0-beta.12",
+        "@frontify/app-bridge": "3.0.0-beta.16",
         "@frontify/fondue": "^11.0.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
