@@ -3,7 +3,7 @@
 import { DropdownSize, IconEnum } from '@frontify/fondue';
 import { BlockSettings } from '@frontify/guideline-blocks-settings';
 
-export const DEFAULT_BACKGROUND_COLOR = { r: 250, g: 191, b: 89, a: 1, name: 'Saffron Mango' };
+export const DEFAULT_BACKGROUND_COLOR = { red: 250, green: 191, blue: 89, alpha: 1, name: 'Saffron Mango' };
 export const FULL_WIDTH = '100%';
 
 export const settings: BlockSettings = {
@@ -17,13 +17,13 @@ export const settings: BlockSettings = {
             choices: [
                 {
                     value: 'custom_block',
-                    icon: IconEnum.Snippet,
+                    icon: 'Snippet' as IconEnum,
                     label: 'Custom Block',
                 },
             ],
         },
     ],
-    content: [
+    basics: [
         {
             id: 'showRichTextEditor',
             type: 'switch',

@@ -18,7 +18,7 @@ type Props = {
 };
 
 const toRgbaString = (color: Color): string => {
-    return `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
+    return `rgba(${color.red}, ${color.green}, ${color.blue}, ${color.alpha})`;
 };
 
 export const AnExampleBlock: FC<Props> = ({ appBridge }) => {
