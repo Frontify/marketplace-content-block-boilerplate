@@ -1,10 +1,13 @@
+/* DO NOT DELETE:
+This file can be modified but must remain within this repository 
+for code checks performed during the review process. */
 {
     "compilerOptions": {
         "esModuleInterop": true,
         "isolatedModules": true,
         "module": "commonjs",
         "moduleResolution": "node",
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "noImplicitReturns": true,
         "noImplicitThis": true,
         "sourceMap": true,
