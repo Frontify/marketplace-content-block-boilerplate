@@ -1,5 +1,3 @@
-/* (c) Copyright Frontify Ltd., all rights reserved. */
-
 import { AppBridgeBlock, useBlockSettings, useEditorState } from '@frontify/app-bridge';
 import { Color, RichTextEditor } from '@frontify/fondue';
 import { FC } from 'react';

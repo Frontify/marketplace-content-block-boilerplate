@@ -1,5 +1,3 @@
-/* (c) Copyright Frontify Ltd., all rights reserved. */
-
 import { DropdownSize, IconEnum } from '@frontify/fondue';
 import { BlockSettings } from '@frontify/guideline-blocks-settings';
 
